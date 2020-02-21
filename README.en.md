@@ -1,12 +1,12 @@
-# 2019-nCoV Infection Data Realtime Crawler
+# COVID-19/2019-nCoV Infection Data Realtime Crawler
 
 [![API Status](https://img.shields.io/website?url=https%3A%2F%2Flab.isaaclin.cn)](https://lab.isaaclin.cn/nCoV/)
-[![API Usage](https://img.shields.io/badge/dynamic/json?color=orange&label=API%20Call&query=%24.count&url=https%3A%2F%2Flab.isaaclin.cn%2FnCoV%2Fapi%2Fusage)](https://lab.isaaclin.cn/nCoV/)
-[![license](https://img.shields.io/github/license/BlankerL/DXY-2019-nCoV-Crawler)](https://github.com/BlankerL/DXY-2019-nCoV-Crawler/blob/master/LICENSE)
+[![API Call](https://img.shields.io/badge/dynamic/json?color=orange&label=API%20Call&query=%24.count&url=https%3A%2F%2Flab.isaaclin.cn%2FnCoV%2Fapi%2Fusage)](https://lab.isaaclin.cn/nCoV/)
+[![license](https://img.shields.io/github/license/BlankerL/DXY-COVID-19-Crawler)](https://github.com/BlankerL/DXY-COVID-19-Crawler/blob/master/LICENSE)
 
 [简体中文](README.md) | English
 
-2019-nCoV infection data realtime crawler, 
+COVID-19/2019-nCoV infection data realtime crawler, 
 the data source is [Ding Xiang Yuan](https://3g.dxy.cn/newh5/view/pneumonia).
 
 Please reduce the deployment of crawlers in order to prevent the crawlers 
@@ -16,9 +16,14 @@ such that other users in need cannot get the data in time.
 I prepared an API for you to make visualizations and analysis, 
 which is for free and does not have any limitation in using. 
 
-API：https://lab.isaaclin.cn/nCoV/  
-**Begining at 17: 15 on January 30, 2019, the number of API calls is counted. 
-But the frequency of API called from single IP will never be recorded.**
+API：https://lab.isaaclin.cn/nCoV/en  
+Remarks:  
+1. **The API will return both Chinese and English version of city names.**
+For more information, please refer to [Issue #61](https://github.com/BlankerL/DXY-COVID-19-Crawler/issues/61).
+2. Begining at 17: 15 on January 30, 2019, the number of API calls is counted. 
+But the frequency of API called from single IP will never be recorded.
+3. WHO named the coronavirus as COVID-19 on February 11, 2020. 
+For the consistency of the API usage, it will be remained as `nCoV`.
 
 **This project is subject to the MIT open source license. 
 If you use the API, please declare the reference in your project.**
@@ -27,7 +32,7 @@ If you use the API, please declare the reference in your project.**
 Recently, many college teachers and students contacted me, 
 hoping to use these data for scientific research. 
 However, not everyone is familiar with the use of APIs and the format of JSON, 
-so I deployed a [data warehouse](https://github.com/BlankerL/DXY-2019-nCoV-Data) 
+so I deployed a [data warehouse](https://github.com/BlankerL/DXY-COVID-19-Data) 
 to publish the latest data in CSV format, which can be easily processed and loaded by most software.
 
 ## Description
@@ -44,15 +49,31 @@ The possible reason is the manually processed data were recorded by mistake.
 The crawler just crawl what it sees, do not deal with any noise data. 
 Therefore, if you use the data for scientific research, please preprocess and clean the data properly. 
 
-In the meantime, I opened an [issue](https://github.com/BlankerL/DXY-2019-nCoV-Crawler/issues/34) 
+In the meantime, I opened an [issue](https://github.com/BlankerL/DXY-COVID-19-Crawler/issues/34) 
 for you to report the potential noise data. I will check and remove them periodically. 
 
+## Reference
+1. If you would like to analyze the data with [R](https://www.r-project.org/),
+you can refer to [pzhaonet/ncovr](https://github.com/pzhaonet/ncovr).
+This project will help you to directly load data into R from either GitHub Data Warehouse or API. 
+
+## Research
+All scientific research results are for reference only.
+1. [yijunwang0805/YijunWang](https://github.com/yijunwang0805/YijunWang)
+
 ## Demonstration
-1. [cuihuan/2020_wuhan](https://github.com/cuihuan/2020_wuhan)  
+1. Website: https://ncov.deepeye.tech/  
+   Time-series data visualization.
+2. [pzhaonet/ncov](https://github.com/pzhaonet/ncov)  
+   Website: https://ncov2020.org
+3. [cuihuan/2020_wuhan](https://github.com/cuihuan/2020_wuhan)  
    Visualization: http://cuihuan.net/wuhan/news.html
-2. [hack-fang/nCov](https://github.com/hack-fang/nCov)  
+4. [hack-fang/nCov](https://github.com/hack-fang/nCov)  
    Visualization: http://yiqing.ahusmart.com/
-3. [Moyck/2019NCOV](https://github.com/Moyck/2019NCOV)
+5. [ohdarling/2019-nCoV-Charts](https://github.com/ohdarling/2019-nCoV-Charts)  
+   Visualization: https://2019-ncov-trends.tk/
+6. [Moyck/2019NCOV](https://github.com/Moyck/2019NCOV)
+7. [Mistletoer/NCP-historical-data-visualization-2019-nCoV-](https://github.com/Mistletoer/NCP-historical-data-visualization-2019-nCoV-)
 
 ## Donation
 No donation is needed. 
